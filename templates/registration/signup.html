@@ -1,0 +1,56 @@
+{% extends 'registration/base_login.html' %}
+
+{%block title%}
+  <title>📝 Cadastro</title>
+{%endblock title%}
+
+{% block container %}
+  <div class="content first-content">
+
+    <div class="first-column">
+      <h2 class="title title-primary">Bem vindo(a) Amante da sétima arte! 🤓📽️</h2>
+      <p class="description description-primary"><b><i>Que a força esteja com você!</i></b></p>
+      <p class="description description-primary">Já possui conta? por favor, faça o login com suas credenciais.</p>
+      <a href="{% url 'login' %}"><button id="signin" class="btn btn-primary">Login</button></a>
+    </div>
+
+    <div class="second-column">
+      <h2 class="title title-second">Criar Conta</h2>
+      <p><i><b>Ou você prefere ficar com a pílula azul?</b></i></p>
+      {% if form.errors %}
+        {% for field in form %}
+            {% for error in field.errors %}
+              <div class="alert alert-danger">
+                  <strong>{{ error|escape }}</strong>
+              </div>
+            {% endfor %}
+        {% endfor %}
+    {% for error in form.non_field_errors %}
+        <div class="alert alert-danger">
+            <strong>{{ error|escape }}</strong>
+        </div>
+    {% endfor %}
+{% endif %}
+      <form class="form" method="post">
+        {% csrf_token %}
+
+        <label class="label-input" for="">
+          <i class="far fa-user icon-modify"></i>
+          <input type="text" placeholder="Nome" value="{{ user.name }}" name="username">
+        </label>
+
+        <label class="label-input" for="">
+          <i class="fas fa-lock icon-modify"></i>
+          <input type="password" placeholder="Senha" value="{{ user.password1 }}" name="password1">
+        </label>
+
+        <label class="label-input" for="">
+          <i class="fas fa-lock icon-modify"></i>
+          <input type="password" placeholder="Senha" value="{{ user.password2 }}" name="password2">
+        </label>
+
+        <button class="btn btn-second" type="submit">Cadastre-se</button>
+      </form>
+    </div>
+  </div>
+{% endblock container %}

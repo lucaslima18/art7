@@ -1,0 +1,53 @@
+{% extends 'registration/base_login.html' %}
+
+{%block title%}
+  <title>🔑 Login</title>
+{%endblock title%}
+
+{% block container %}
+  <div class="content first-content">
+
+    <div class="first-column">
+      <h2 class="title title-primary">Bem vindo(a️) de volta nobre Guerreiro(a)! ⚔️🛡️</h2>
+      <p class="description description-primary"><strong><i>“Ennyn Durin aran Moria. Pedo mellon a minno“</i></strong></p>
+    </div>
+
+    <div class="second-column">
+      <h2 class="title title-second">Login</h2>
+
+            {% if form.errors %}
+              {% for field in form %}
+                  {% for error in field.errors %}
+                    <div class="alert alert-danger">
+                        <strong>{{ error|escape }}</strong>
+                    </div>
+                  {% endfor %}
+              {% endfor %}
+          {% for error in form.non_field_errors %}
+              <div class="alert alert-danger">
+                  <strong>{{ error|escape }}</strong>
+              </div>
+          {% endfor %}
+      {% endif %}
+
+
+      <form class="form" method="post">
+        {% csrf_token %}
+
+        <label class="label-input" for="">
+          <i class="far fa-user icon-modify"></i>
+          <input type="text" placeholder="Nome" value="{{ user.name }}" name="username">
+        </label>
+
+        <label class="label-input" for="">
+          <i class="fas fa-lock icon-modify"></i>
+          <input type="password" placeholder="Senha" value="{{ user.password }}" name="password">
+        </label>
+
+        <button class="btn btn-second" type="submit">Entrar</button>
+      </form>
+
+
+    </div>
+  </div>
+{% endblock container %}
