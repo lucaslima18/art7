@@ -1,2 +1,11 @@
-# art7
-An webapp for view informations of tv shows an films 
+#art7 
+
+##introduction
+
+This is one webapp
+
+I making this webapp using Python, Django (python framework for web developer) and The Movie Database API
+
+##Build this project
+
+
