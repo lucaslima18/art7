@@ -16,5 +16,12 @@ Este projeto está em construção, tendo isto em mente, enquanto ele se encontr
 ## Build this project
 
 ## Test this project
+Para executar os testes desta aplicação basta digitar o seguinte comando no diretório principal do projeto:
+
+```
+$ python manage.py test
+```
+
+
 
 
