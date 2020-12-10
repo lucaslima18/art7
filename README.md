@@ -5,7 +5,9 @@
 This is one webapp
 
 ## Requirements
-I making this webapp using Python, Django (python framework for web developer) and The Movie Database API, for run this project is necessary install:
+I making this webapp using Python, Django (python framework for web developer) and The Movie Database API.
+
+For run this project is necessary install:
 
 ```
 Python = "3.8"
