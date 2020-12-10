@@ -11,10 +11,16 @@ I making this webapp using Python, Django (python framework for web developer) a
 Este projeto está em construção, tendo isto em mente, enquanto ele se encontrar neste processo irei inserir todas as funcionalidades que pretendo implementar durante o desenvolvimento dele no checklist abaixo para que vocês possam acompanhar o desenvolvimento dele sabendo que funcionalidades irão encontrar.
 
 - [x] Criação e Autenticação de usuários
-- [] Recuperação de Senhas
+- [ ] Recuperação de Senhas
 - [x] Listas com informações sobre filmes e séries atualizadas de acordo com o The Movie Database
+- [x] Pesquisa por filmes ou séries puxando dados do The Movie Database
+- [ ] Sistema de lista de filmes e séries
+- [ ] Posts sobre filmes e séries
 
 ## project structure
+O projeto atualmente está com a seguinte estrutura:
+
+
 
 
 ## Build this project
